@@ -21,7 +21,305 @@ All data files are stored in a folder titled 'Data'.
 
 ```python
 #Your code here
+import pandas as pd
+demos = pd.read_excel('/Users/zhaleh/flatiron/section01/dsc-1-03-05-importing-data-using-pandas-lab-online-ds-sp-000/Data/Zipcode_Demos.xlsx', skiprows=48)
+zipcode_df = pd.DataFrame(demos)
+zipcode_df
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>JURISDICTION NAME</th>
+      <th>COUNT PARTICIPANTS</th>
+      <th>COUNT FEMALE</th>
+      <th>PERCENT FEMALE</th>
+      <th>COUNT MALE</th>
+      <th>PERCENT MALE</th>
+      <th>COUNT GENDER UNKNOWN</th>
+      <th>PERCENT GENDER UNKNOWN</th>
+      <th>COUNT GENDER TOTAL</th>
+      <th>PERCENT GENDER TOTAL</th>
+      <th>...</th>
+      <th>COUNT CITIZEN STATUS TOTAL</th>
+      <th>PERCENT CITIZEN STATUS TOTAL</th>
+      <th>COUNT RECEIVES PUBLIC ASSISTANCE</th>
+      <th>PERCENT RECEIVES PUBLIC ASSISTANCE</th>
+      <th>COUNT NRECEIVES PUBLIC ASSISTANCE</th>
+      <th>PERCENT NRECEIVES PUBLIC ASSISTANCE</th>
+      <th>COUNT PUBLIC ASSISTANCE UNKNOWN</th>
+      <th>PERCENT PUBLIC ASSISTANCE UNKNOWN</th>
+      <th>COUNT PUBLIC ASSISTANCE TOTAL</th>
+      <th>PERCENT PUBLIC ASSISTANCE TOTAL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10001</td>
+      <td>44</td>
+      <td>22</td>
+      <td>0.50</td>
+      <td>22</td>
+      <td>0.50</td>
+      <td>0</td>
+      <td>0</td>
+      <td>44</td>
+      <td>100</td>
+      <td>...</td>
+      <td>44</td>
+      <td>100</td>
+      <td>20</td>
+      <td>0.45</td>
+      <td>24</td>
+      <td>0.55</td>
+      <td>0</td>
+      <td>0</td>
+      <td>44</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10002</td>
+      <td>35</td>
+      <td>19</td>
+      <td>0.54</td>
+      <td>16</td>
+      <td>0.46</td>
+      <td>0</td>
+      <td>0</td>
+      <td>35</td>
+      <td>100</td>
+      <td>...</td>
+      <td>35</td>
+      <td>100</td>
+      <td>2</td>
+      <td>0.06</td>
+      <td>33</td>
+      <td>0.94</td>
+      <td>0</td>
+      <td>0</td>
+      <td>35</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10003</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>100</td>
+      <td>...</td>
+      <td>1</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>1</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10004</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10005</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>100</td>
+      <td>...</td>
+      <td>2</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>2</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>10006</td>
+      <td>6</td>
+      <td>2</td>
+      <td>0.33</td>
+      <td>4</td>
+      <td>0.67</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+      <td>100</td>
+      <td>...</td>
+      <td>6</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>6</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>10007</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>1</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>100</td>
+      <td>...</td>
+      <td>1</td>
+      <td>100</td>
+      <td>1</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>10009</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>2</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>100</td>
+      <td>...</td>
+      <td>2</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>2</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>10010</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10011</td>
+      <td>3</td>
+      <td>2</td>
+      <td>0.67</td>
+      <td>1</td>
+      <td>0.33</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>100</td>
+      <td>...</td>
+      <td>3</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>3</td>
+      <td>1.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table>
+<p>10 rows × 46 columns</p>
+</div>
+
+
+
+The data doesn't start until line 48, the first 47 rows are summary statistics in row format (each stat is on a new row) rather than on a single row lining up with the data points.
 
 ## Level Up (Optional)
 
